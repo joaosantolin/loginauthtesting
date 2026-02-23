@@ -10,11 +10,7 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-});
-
-Route::get('/login', function () {
-    return view('login');
-});
+})->name('dashboard');
 
 Route::get('/login', [LoginController::class, 'showLogin']) -> name('show.login');
 Route::get('/register', [LoginController::class, 'showRegister']) -> name('show.register');
@@ -22,3 +18,5 @@ Route::get('/register', [LoginController::class, 'showRegister']) -> name('show.
 
 Route::post('/login', [LoginController::class, 'login']) -> name('login');
 Route::post('/register', [LoginController::class, 'register']) -> name('register');
+
+Route::post('/logout', [LoginController::class, 'logout']) -> name('logout');

@@ -11,7 +11,10 @@
         <ul>
             @if(Auth::check())
                 <li><a href="/dashboard">Dashboard</a></li>
-                <li><a href="/logout">Logout</a></li>
+                <form method="POST" action="{{ route('logout') }}" style="display: inline;">
+                    @csrf
+                    <button type="submit" style="background: none; border: none; padding: 0; cursor: pointer; color: blue; text-decoration: underline;">Logout</button>
+                </form>
             @else
                 <li><a href="{{ route('show.login') }}">Login</a></li>
                 <li><a href="{{ route('show.register') }}">Register</a></li>
