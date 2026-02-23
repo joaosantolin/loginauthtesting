@@ -104,6 +104,7 @@
             </div>
 
             <button type="submit">Registrar</button>
+            <a href="{{ route('login') }}" style="display: block; text-align: center; margin-top: 15px; color: #667eea; text-decoration: none;">Já tem uma conta? Faça login</a>
         </form>
     </div>
 </body>
