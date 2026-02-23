@@ -81,11 +81,11 @@
 <body>
     <div class="login-container">
         <h1>Login</h1>
-        <form method="" action="">
+        <form method="POST" action="{{ route('login') }}">
             @csrf
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" value="{{ old('email') }}" required>
             </div>
 
             <div class="form-group">

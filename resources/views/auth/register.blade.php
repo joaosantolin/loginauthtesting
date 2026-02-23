@@ -81,7 +81,7 @@
 <body>
     <div class="login-container">
         <h1>Registro</h1>
-        <form method="POST" action="/register">
+        <form method="POST" action="{{ route('register') }}">
             @csrf
 
             <div class="form-group">
@@ -90,12 +90,17 @@
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" value="{{ old('email') }}" required>
             </div>
 
             <div class="form-group">
                 <label for="password">Senha:</label>
                 <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password_confirmation">Confirmar Senha:</label>
+                <input type="password" id="password_confirmation" name="password_confirmation" required>
             </div>
 
             <button type="submit">Registrar</button>
