@@ -20,7 +20,7 @@
                 <li><a href="{{ route('show.register') }}">Register</a></li>
             @endif
             @if(Auth::user() && Auth::user()->is_admin)
-                <li><a href="/admin">Admin Panel</a></li>
+                <li><a href="{{ route('admin.dashboard') }}">Admin Panel</a></li>
             @endif
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
